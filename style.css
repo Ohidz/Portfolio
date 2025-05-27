@@ -559,25 +559,30 @@ span{
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 5%;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 2.4rem;
+    flex: 1 1 100%;
   }
 
   nav {
-  display: flex;
-  flex-direction: row; 
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  width: 100%;
-  margin-top: 1rem;
-  background-color: transparent;
-  border: none;
-}
-
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 0.5rem;
+    gap: 2rem;
+    background-color: transparent;
+    border: none;
+  }
 
   nav a {
-    margin: 1rem 0;
-    font-size: 1.6rem;
+    margin: 0.8rem 0;
+    font-size: 1.5rem;
   }
 
   .home {
@@ -597,6 +602,18 @@ span{
 
   .home-content p {
     font-size: clamp(1.4rem, 4vw, 1.6rem);
+  }
+
+  .typing-text {
+    font-size: 2rem;
+    max-width: 90vw;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .typing-text span::before {
+    font-size: 2rem;
   }
 
   .home-img img {
@@ -653,3 +670,4 @@ span{
     font-size: 1.5rem;
   }
 }
+
