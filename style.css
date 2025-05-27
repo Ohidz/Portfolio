@@ -280,20 +280,6 @@ span{
     text-align: center;
     
 }
-
-
-.about-img img {
-    width: 35vw;
-    border-radius: 1rem;
-    box-shadow: 0 0 25px #b74b4b;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.about-img img:hover {
-    transform: scale(1.05);
-}
-
 .about-content .heading {
     font-size: 4.5rem;
     font-weight: 700;
@@ -563,4 +549,107 @@ span{
 .contact-info a:hover {
     color: white;
     text-decoration: underline;
+}
+
+
+/* mobile */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 5%;
+  }
+
+  nav {
+  display: flex;
+  flex-direction: row; 
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: transparent;
+  border: none;
+}
+
+
+  nav a {
+    margin: 1rem 0;
+    font-size: 1.6rem;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 3rem;
+    padding: 6rem 5% 3rem;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+  }
+
+  .home-content h3 {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+  }
+
+  .home-content p {
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
+  }
+
+  .home-img img {
+    width: 80%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 5rem 5%;
+    text-align: center;
+  }
+
+  .about-img img {
+    width: 80vw;
+    max-width: 320px;
+    margin-bottom: 2rem;
+  }
+
+  .about-content .heading,
+  .projects .heading,
+  .contact .heading {
+    font-size: clamp(2.6rem, 6vw, 3.5rem);
+    text-align: center;
+  }
+
+  .project-box,
+  .education-entry,
+  .skill-category {
+    width: 100%;
+  }
+
+  .project-container {
+    padding: 0 1rem;
+  }
+
+  .skill-grid,
+  .education-grid {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .btn,
+  .project-box .btn {
+    margin: 2rem auto 0;
+    display: block;
+    text-align: center;
+    font-size: 1.4rem;
+  }
+
+  .contact-info p,
+  .contact-info a {
+    font-size: 1.5rem;
+  }
 }
