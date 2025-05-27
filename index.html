@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohidzz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav a");
+
+            function updateActiveLink() {
+                let scrollPos = window.scrollY + 150;
+                sections.forEach(section => {
+                    const top = section.offsetTop;
+                    const height = section.offsetHeight;
+                    const id = section.getAttribute("id");
+                    if (scrollPos >= top && scrollPos < top + height) {
+                        navLinks.forEach(link => {
+                            link.classList.remove("active");
+                            if (link.getAttribute("href") === `#${id}`) {
+                                link.classList.add("active");
+                            }
+                        });
+                    }
+                });
+            }
+            window.addEventListener("scroll", updateActiveLink);
+            updateActiveLink();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Ohid</a>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="Ohid Profile" />
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Ohid</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I’m a Computer Science graduate from the University of Roehampton, London, with a focus on full-stack development, AI, machine learning, and data engineering. I’m eager to apply my skills in real-world projects and contribute to innovative teams.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/ohiduzzaman-ohid/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/dashboard" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <a href="mailto:ohiduzzaman306@gmail.com?subject=&body=Hi Ohid," class="btn">Hire me</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">About <span>Me</span></h2>
+            <h3>Building Intelligent Systems with Code</h3>
+            <p>I’m a recent Computer Science graduate from the University of Roehampton, London, currently awaiting my final results. I have a strong foundation in full-stack development, artificial intelligence (AI), machine learning, data engineering, cybersecurity, and API development.</p>
+            <p>My work includes building responsive web applications, developing Android apps, training machine learning models, integrating RESTful APIs, and implementing AI-powered features. I've also explored security testing and vulnerability assessment.</p>
+            <p>I’m currently open to junior developer roles, internships, or projects where I can apply my skills and grow with a forward-thinking team.</p>
+
+            <!-- Education -->
+            <div class="education">
+                <h3>🎓 Education</h3>
+                <div class="education-grid">
+                    <div class="education-entry">
+                        <h4><strong>BSc (Hons) Computer Science</strong></h4>
+                        <p>University of Roehampton, London</p>
+                        <p>2022 – 2025 <em>(Results Pending)</em></p>
+                    </div>
+                    <div class="education-entry">
+                        <h4><strong>International Foundation Programme (IFP)</strong></h4>
+                        <p>University of Roehampton, London</p>
+                        <p>2021 – 2022</p>
+                    </div>
+                    <div class="education-entry">
+                        <h4><strong>Higher Secondary Certificate (HSC)</strong></h4>
+                        <p>Dhaka, Bangladesh</p>
+                        <p>2016 – 2018</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="skills">
+                <h3>💻 Skills</h3>
+                <div class="skill-grid">
+                    <div class="skill-category">
+                        <h4><i class="fas fa-code"></i> Programming Languages</h4>
+                        <ul><li>Python</li><li>Dart</li><li>HTML & CSS</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-cubes"></i> Frameworks & Technologies</h4>
+                        <ul><li>Flutter</li><li>Django</li><li>RESTful APIs</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-robot"></i> AI & Machine Learning</h4>
+                        <ul><li>Model development</li><li>Data preprocessing</li><li>AI integration</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-shield-alt"></i> Cybersecurity</h4>
+                        <ul><li>Vulnerability assessment</li><li>Security testing</li><li>Secure coding</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-tools"></i> Tools</h4>
+                        <ul><li>VS Code</li><li>Android Studio</li><li>Postman</li><li>Git & GitHub</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-database"></i> Database Management</h4>
+                        <ul><li>SQL</li><li>Database design</li><li>PostgreSQL</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-project-diagram"></i> Software Engineering</h4>
+                        <ul><li>Data structures & algorithms</li><li>Software testing</li><li>Debugging</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-stream"></i> Methodologies</h4>
+                        <ul><li>Agile</li><li>Scrum</li><li>Kanban</li></ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4><i class="fas fa-users"></i> Soft Skills</h4>
+                        <ul><li>Analytical thinking</li><li>Attention to detail</li><li>Team collaboration</li></ul>
+                    </div>
+                </div>
+            </div><br>
+            <div class="cv-button">
+                <a href="mailto:ohiduzzaman306@gmail.com?subject=Requesting for CV&body=Hi Ohid," class="btn">Download CV</a>
+            </div>
+
+        
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+            <h2 class="heading">My <span>Projects</span></h2>
+            <!-- <div class="project-container"> -->
+
+                <div class="project-box">
+                    <h3>EcoGenie – Sustainability Advisor Mobile App</h3>
+                    <p class="project-tech">Flutter & Dart | Android Studio | Group Project</p>
+                    
+                    <p class="project-section-title">Goal:</p>
+                    <p>
+                        To design and build a responsive, chat-based mobile app that delivers personalized sustainability advice and product recommendations using AI, starting with a custom onboarding survey.
+                    </p>
+                    <p class="project-section-title">What I Did:</p>
+                    <ul>
+                        <li>Designed high-fidelity UI/UX prototypes optimized for Android devices.</li>
+                        <li>Developed the frontend using Flutter and Dart with responsive and accessible design.</li>
+                        <li>Integrated real-time AI chat interface via RESTful API for sustainability tips and eco-product suggestions.</li>
+                        <li>Built a personalized onboarding survey to assess user habits and tailor recommendations.</li>
+                        <li>Implemented dark mode, adaptive theming, and purposeful animations for better UX.</li>
+                        <li>Conducted usability testing and cross-device optimization for consistent performance.</li>
+                    </ul>
+                    <a href="https://github.com/SazamAmmy/OrionEngine-Ensemble-v2.0/tree/main/frontend"  target="_blank" rel="noopener noreferrer" class="btn">View Project</a>
+                </div>
+                <br>
+                <div class="project-box">
+                    <h3>UniMatch – Study Abroad Advisory Website</h3>
+                    <p class="project-tech">HTML & CSS | JavaScript | Solo Project</p>
+                    <p class="project-section-title">Goal:</p>
+                    <p>
+                        To build a professional and responsive website for a company helping students apply to UK universities, showcasing services and improving user engagement.
+                    </p>
+                    <p class="project-section-title">What I Did:</p>
+                    <ul>
+                        <li>Designed and developed a mobile-friendly UI using HTML, CSS, and JavaScript.</li>
+                        <li>Created clear navigation and service sections to guide users through the process.</li>
+                        <li>Integrated a live, client-facing deployment at <a href="https://unimatch.org" target="_blank">unimatch.org</a>.</li>
+                    </ul>
+                    <a href="https://unimatch.org" class="btn" target="_blank" rel="noopener noreferrer">View Project</a>
+                </div>
+                <br>
+                <div class="project-box">
+                    <h3>CIFAR-10 Image Classification – Convolutional Neural Network (CNN)</h3>
+                    <p class="project-tech">TensorFlow | Keras | Python | Solo Project</p>
+
+                    <p class="project-section-title">Goal:</p>
+                    <p>
+                        To build and train a Convolutional Neural Network to classify 32x32 color images into 10 object categories (e.g., airplane, cat, truck) using the CIFAR-10 dataset.
+                    </p>
+                    
+                    <p class="project-section-title">What I Did:</p>
+                        <ul>
+                            <li>Preprocessed the dataset with normalization and one-hot encoding for optimal model performance.</li>
+                            <li>Designed a CNN with Conv2D, MaxPooling, and Dense layers for feature extraction and classification.</li>
+                            <li>Implemented regularization using Dropout to prevent overfitting.</li>
+                            <li>Trained and validated the model, improving accuracy through tuning architecture and epochs.</li>
+                            <li>Visualized training performance and evaluated model accuracy with a confusion matrix heatmap.</li>
+                            <li>Resolved library compatibility issues through version management and documentation analysis.</li>
+                        </ul>
+
+                        <a href="https://github.com/Ohidz/Machine_learning-" target="_blank" rel="noopener noreferrer" class="btn">View Project</a>
+                </div>
+                <br>
+
+
+
+                <div class="project-box">
+                    <h3>Smart Vacuum Cleaner Simulation</h3>
+                    <p class="project-tech">Python | AI | Solo Project</p>
+                    <p class="project-section-title">Goal:</p>
+                    <p>
+                        To simulate an AI-based smart vacuum that detects and cleans waste efficiently using pathfinding algorithms.
+                    </p>
+                    <p class="project-section-title">What I Did:</p>
+                    <ul>
+                        <li>Built a grid-based simulation using Python with a text-based UI.</li>
+                        <li>Implemented pathfinding logic using Manhattan distance.</li>
+                        <li>Optimized performance using efficient data structures like sets and tuples.</li>
+                    </ul>
+                    <a href="https://github.com/Ohidz/Artificial-Intelligence" target="_blank" rel="noopener noreferrer" class="btn">View Project</a>
+                </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <p>If you'd like to get in touch, feel free to reach out via email or LinkedIn.</p>
+        <div class="contact-info">
+            <p><strong>Email:</strong> <a href="mailto:ohiduzzaman306@gmail.com">ohiduzzaman306@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ohiduzzaman-ohid/" target="_blank" rel="noopener noreferrer">Ohiduzzaman Ohid</a></p>
+        </div>
+    </section>
+</body>
+</html>
