@@ -63,40 +63,6 @@ nav a.active {
   color: #b74b4b;
   border-bottom: 3px solid #b74b4b;
 }
-
-@media(max-width:995px) {
-  nav {
-    position: absolute;
-    display: none;
-    top: 0;
-    right: 0;
-    width: 40%;
-    border-left: 3px solid #b74b4b;
-    border-bottom: 3px solid #b74b4b;
-    border-bottom-left-radius: 2rem;
-    padding: 1rem solid;
-    background-color: #161616;
-    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
-  }
-
-  nav.active {
-    display: block;
-  }
-
-  nav a {
-    display: block;
-    font-size: 2rem;
-    margin: 3rem 0;
-  }
-
-  nav a:hover,
-  nav a.active {
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border-bottom: 0.5rem solid #b74b4b;
-  }
-}
-
 section {
   min-height: 100vh;
   padding: 5rem 9% 5rem;
@@ -192,15 +158,20 @@ span{
     color: black;
     box-shadow: 0 0 25px #b74b4b;
 }
+.intro-text{
+    display: inline-block;
+    position: relative;
+}
 
 .typing-text{
     font-size: 34px;
     font-weight: 600;
     min-width: 280px;
+    overflow: hidden;
 }
-
 .typing-text span{
     position: relative;
+    
 }
 
 .typing-text span::before{
@@ -216,13 +187,13 @@ span{
     width: calc(100% + 8px);
     height: 100%;
     border-left: 3px solid black;
-    right: -8;
+    right:-8rm;
     animation: cursor 0.6s infinite;
-}
 
+}
 @keyframes cursor{
     to{
-        border-left: 3px solid #b74b4b;
+        border-left: 3px solid #b74b4b;        
     }
 }
 
@@ -239,33 +210,6 @@ span{
   75%, 100% {
     content: "Backend Engineer";
   }
-}
-
-
-@media (max-width: 1000px){
-    .home{
-        gap: 4rem;
-    }
-}
-
-@media(max-width:995px){
-    .home{
-        flex-direction: column;
-        margin: 5rem 4rem;
-    }
-
-    .home .home-content h3{
-        font-size: 2.5rem;
-    }
-
-    .home-content h1{
-        font-size: 5rem;
-    }
-
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
-    }
 }
 /* about */
 
@@ -300,25 +244,7 @@ span{
     margin-bottom: 2rem;
 }
 
-@media (max-width: 995px) {
-    .about {
-        flex-direction: column;
-        text-align: center;
-        padding: 5rem 4rem;
-    }
 
-    .about-img img {
-        width: 70vw;
-    }
-
-    .about-content .heading {
-        font-size: 4rem;
-    }
-
-    .about-content h3 {
-        font-size: 2rem;
-    }
-}
 .education {
     margin-top: 3rem;
 }
@@ -403,10 +329,6 @@ span{
   display: inline-block;
 }
 
-
-
-
-
 /* Project Section */
 .projects {
     padding: 5rem 9%;
@@ -442,14 +364,13 @@ span{
     box-shadow: 0 0 20px #b74b4b;
 }
 
-/* Project Title */
+
 .project-box h3 {
     font-size: 2.2rem;
     color: #b74b4b;
     margin-bottom: 1rem;
 }
 
-/* Section Titles: "Goal", "What I Did" */
 .project-section-title {
     font-weight: bold;
     margin-top: 1.5rem;
@@ -458,14 +379,12 @@ span{
     font-size: 1.7rem;
 }
 
-/* Regular Paragraph Text */
 .project-box p {
     font-size: 1.6rem;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
 
-/* Bullet List Styling */
 .project-box ul {
     font-size: 1.6rem;
     margin-bottom: 1.5rem;
@@ -479,7 +398,6 @@ span{
     margin-bottom: 0.7rem;
 }
 
-/* Button and Link Styling */
 .project-box a {
     color: #b74b4b;
     text-decoration: underline;
@@ -552,38 +470,69 @@ span{
 }
 
 
+.menu-toggle {
+  display: none;
+
+  cursor: pointer;
+  font-size: 2.4rem;
+  color: #d36c6c; 
+  background: none;
+  border: none;
+  
+}
+
+
 /* mobile */
 
-@media (max-width: 768px) {
+@media (max-width: 995px) {
+  .menu-toggle {
+    display: block;
+    margin-left: auto; 
+    cursor: pointer; 
+    z-index: 1000; 
+    position: relative;
+
+  }
+
   header {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
     padding: 1rem 5%;
-    gap: 0.5rem;
+    position: fixed;
   }
 
   .logo {
     font-size: 2.4rem;
-    flex: 1 1 100%;
+    
   }
 
   nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-    margin-top: 0.5rem;
-    gap: 2rem;
-    background-color: transparent;
-    border: none;
+  position: absolute;
+  top: 4.5rem; 
+  right: 0;
+  background: #161616;
+  width: 60%;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: none;
+
+  border: 2px solid #d36c6c;
+  box-shadow: 0 0 0.8rem #d36c6c;
+  z-index: 999;
+  }
+
+  nav.active {
+    display: block;
   }
 
   nav a {
-    margin: 0.8rem 0;
-    font-size: 1.5rem;
+    display: block;
+    margin: 1.5rem 0;
+    font-size: 2rem;
   }
+
 
   .home {
     flex-direction: column;
@@ -671,3 +620,28 @@ span{
   }
 }
 
+/* Media Query: max-width 768px */
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 5%;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .typing-text {
+    font-size: 2.4rem;
+  }
+
+  .project-box p,
+  .project-box ul,
+  .project-box a,
+  .project-box .btn {
+    font-size: 1.4rem;
+  }
+}
